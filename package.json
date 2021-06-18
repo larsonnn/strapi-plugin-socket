@@ -1,11 +1,11 @@
 {
   "name": "strapi-plugin-socket.io",
   "version": "0.1.4",
-  "description": "A Strapi plugin used to show how you could integrate with Socket.io",
+  "description": "A Strapi plugin which integrate Socket.io",
   "strapi": {
     "name": "Socket",
     "icon": "plug",
-    "description": "A Strapi plugin used to show how you could integrate with Socket.io"
+    "description": "A Strapi plugin which integrate Socket.io"
   },
   "dependencies": {
     "strapio": "^1.0.11"
