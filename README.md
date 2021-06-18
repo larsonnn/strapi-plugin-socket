@@ -1,4 +1,4 @@
-# Strapi Socket.io Plugin
+# Strapi Socket.io Plugin - ALPHA
 
 ## Description
 
