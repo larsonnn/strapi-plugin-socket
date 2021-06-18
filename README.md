@@ -19,6 +19,19 @@ Installing is simple and the plugin is enabled by default just a simple:
 
 In a Strapi project, tested on v3.6.2
 
+## Configuration
+
+ you can enable endpoints by creating an extension for strapi-plugin-socket. If there is no configuration file then ALL changes on entities are emit.
+
+extensions/socket/services/config.json
+```json
+{
+	"routes": [
+		{ "apiName": "user" }
+	]
+}
+```
+
 ## Client Sample
 
 If you want a sample client to test with this:
@@ -68,17 +81,3 @@ Run it with `node index.js` you can also enable the socket.io debugger with `DEB
 This will respond on all normal content-types (no plugins) with the exception of the `content-manager` plugin for normal content types.
 
 TLDR: This works for updates made both in REST and the Strapi admin panel. I didn't test GraphQL because I'm lazy.
-
----
-## Configuration
-
- **you can enable endpoints by creating an extension for strapi-plugin-socket**
-
-extensions/socket/services/config.json
-```json
-{
-	"routes": [
-		{ "apiName": "user" }
-	]
-}
-```
