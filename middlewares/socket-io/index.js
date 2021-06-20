@@ -20,10 +20,12 @@ module.exports = (strapi) => {
       const settings  = loadSettings(strapi.config.appPath);
       let settingsRoutes = settings?.routes;
       if(!Array.isArray(settingsRoutes)) settingsRoutes = null;
-      const { actions } = strapi.plugins.socket.services.socket;
+      const { actions } = strapi.plugins['socket-io'].services['socket-io'];
       strapi.app.use(async (ctx, next) => {
         await next();
+
         let route = ctx.request.route;
+
         try {
           if (!route.plugin) {
             if (
@@ -37,6 +39,7 @@ module.exports = (strapi) => {
                 
                 if(isValidRoute.length === 0) return;
               }
+              
                 strapi.StrapIO.emit(
                   strapi.controllers[route.controller],
                   route.action,
@@ -71,6 +74,7 @@ module.exports = (strapi) => {
               model.apiName in strapi.controllers &&
               actions().includes(route.action) === true
             ) {
+          
               strapi.StrapIO.emit(
                 strapi.controllers[model.apiName],
                 action,
