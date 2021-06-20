@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-socket.io",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "A Strapi plugin which integrate Socket.io",
   "strapi": {
     "name": "Socket",
