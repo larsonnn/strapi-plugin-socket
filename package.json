@@ -1,5 +1,5 @@
 {
-  "name": "strapi-plugin-socket.io",
+  "name": "strapi-plugin-socket-io",
   "version": "0.1.8",
   "description": "A Strapi plugin which integrate Socket.io",
   "strapi": {
@@ -26,10 +26,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/larsonnn/strapi-plugin-socket.io.git"
+    "url": "git://github.com/larsonnn/strapi-plugin-socket-io.git"
   },
   "bugs": {
-    "url": "https://github.com/larsonnn/strapi-plugin-socket.io/issues"
+    "url": "https://github.com/larsonnn/strapi-plugin-socket-io/issues"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",

@@ -1,5 +1,5 @@
 {
-  "socket": {
+  "socket-io": {
     "enabled": true
   }
 }
