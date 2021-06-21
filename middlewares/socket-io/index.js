@@ -4,7 +4,7 @@ const path = require('path');
 const { sanitizeEntity } = require("strapi-utils");
 
 const loadSettings = (appPath) => {
-	const routesPath = path.join(appPath, 'extensions', 'socket', 'services', 'config.json');
+	const routesPath = path.join(appPath, 'extensions', 'socket-io', 'services', 'config.json');
 	if(fs.existsSync(routesPath)) {
 		return require(routesPath);
 	}
@@ -25,7 +25,7 @@ module.exports = (strapi) => {
         await next();
 
         let route = ctx.request.route;
-        if(!actions().includes(route.action)) return;
+        if(!actions().includes(route?.action)) return;
 
         if(route.action === "bulkdelete") {
           ctx.response.body = ctx.response.body.filter(body => body.published_at !== null);

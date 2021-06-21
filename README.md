@@ -1,4 +1,4 @@
-# Strapi Socket.io Plugin - ALPHA
+# Strapi Socket.IO Plugin
 
 ## Description
 
@@ -17,13 +17,13 @@ Installing is simple and the plugin is enabled by default just a simple:
 - `npm i -s strapi-plugin-socket.io`
 - `yarn add strapi-plugin-socket.io`
 
-In a Strapi project, tested on v3.6.2
+In a Strapi project, tested on v3.6.3
 
 ## Configuration
 
  you can enable endpoints by creating an extension for strapi-plugin-socket. If there is no configuration file then ALL changes on entities are emit.
 
-extensions/socket/services/config.json
+extensions/socket-io/services/config.json
 ```json
 {
 	"routes": [
@@ -32,11 +32,9 @@ extensions/socket/services/config.json
 }
 ```
 
+apiName is the collection-type name (without plural suffix)
+
 ## Client Sample
-
-If you want a sample client to test with this:
-
-**NOTE** as the original package author of StrapIO didn't specify you need the following package version of `"socket.io-client": "2.3.0"`
 
 Init a new node project in a clean folder:
 
@@ -45,8 +43,8 @@ Init a new node project in a clean folder:
 
 Install the proper socket.io client:
 
-- `npm i -s socket.io-client:2.3.0`
-- `yarn add socket.io-client:2.3.0`
+- `npm i -s socket.io-client`
+- `yarn add socket.io-client`
 
 Create an `index.js`:
 
@@ -79,5 +77,3 @@ socket.on("delete", (data) => {
 
 Run it with `node index.js` you can also enable the socket.io debugger with `DEBUG=socket* node index.js`
 This will respond on all normal content-types (no plugins) with the exception of the `content-manager` plugin for normal content types.
-
-TLDR: This works for updates made both in REST and the Strapi admin panel. I didn't test GraphQL because I'm lazy.
