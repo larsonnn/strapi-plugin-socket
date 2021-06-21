@@ -18,14 +18,15 @@ module.exports = (strapi) => {
     },
     initialize() {
       const settings  = loadSettings(strapi.config.appPath);
-      let settingsRoutes = settings?.routes;
+      let settingsRoutes = settings ? settings.routes : null;
       if(!Array.isArray(settingsRoutes)) settingsRoutes = null;
       const { actions } = strapi.plugins['socket-io'].services['socket-io'];
       strapi.app.use(async (ctx, next) => {
         await next();
 
         let route = ctx.request.route;
-        if(!actions().includes(route?.action)) return;
+        if(route === undefined) return;
+        if(!actions().includes(route.action)) return;
 
         if(route.action === "bulkdelete") {
           ctx.response.body = ctx.response.body.filter(body => body.published_at !== null);
