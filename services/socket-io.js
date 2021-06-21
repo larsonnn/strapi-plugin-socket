@@ -8,6 +8,6 @@
 
 module.exports = {
   actions: () => {
-    return ["create", "update", "delete", "bulkdelete"];
+    return ["create", "update", "delete", "bulkdelete", "publish", "unpublish"];
   },
 };

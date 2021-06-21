@@ -25,6 +25,19 @@ module.exports = (strapi) => {
         await next();
 
         let route = ctx.request.route;
+        if(!actions().includes(route.action)) return;
+
+        if(route.action === "bulkdelete") {
+          ctx.response.body = ctx.response.body.filter(body => body.published_at !== null);
+          if(ctx.response.body.length === 0) return;
+        } else {
+          if(!ctx.response.body.published_at && route.action !== "unpublish") {
+            return;
+          }
+        }
+
+        if(route.action === "publish") route.action = "create";
+        if(route.action === "unpublish") route.action = "delete"
 
         try {
           if (!route.plugin) {
