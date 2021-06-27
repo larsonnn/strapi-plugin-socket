@@ -1,5 +1,9 @@
 # Strapi Socket.IO Plugin
 
+## UPDATE for STRAPIO v2: Subscribe only
+
+You need to subscribe to one content-type (see client example). You will not receive data from all content-types as default anymore.
+
 ## Description
 
 this plugin will enhance strapi with an easy to use [StrapIO](https://www.npmjs.com/package/strapio). It will trigger on entity changes and you don't need to write custome Controller like with StrapIO alone.
@@ -57,6 +61,8 @@ const token = "replace with your end-user JWT";
 const socket = io.connect(API_URL, {
   query: { token },
 });
+
+socket.emit('subscribe', 'article');
 
 socket.on("create", async (data) => {
   //do something
