@@ -18,8 +18,8 @@ The plugin was first created by [derrickmehaffy - The Strapi Guru ](https://stra
 
 Installing is simple and the plugin is enabled by default just a simple:
 
-- `npm i -s strapi-plugin-socket.io`
-- `yarn add strapi-plugin-socket.io`
+- `npm i -s strapi-plugin-socket-io`
+- `yarn add strapi-plugin-socket-io`
 
 In a Strapi project, tested on v3.6.3
 
