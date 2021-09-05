@@ -2,6 +2,6 @@
 
 module.exports = () => {
   process.nextTick(() => {
-    strapi.StrapIO = new (require("strapio"))(strapi);
+    strapi.StrapIO = (require("strapio"))(strapi);
   });
 };
