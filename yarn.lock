@@ -377,10 +377,10 @@ strapi-utils@^3.6.8:
     pluralize "^8.0.0"
     yup "^0.32.9"
 
-strapio@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/strapio/-/strapio-2.3.2.tgz#3223dd0fd0eabd2311b2464f0480c8951826985a"
-  integrity sha512-mNJDEAmdyN27f1yP4lDotawHqN2kAvApa3KxXOSl4UuSEKn+FjCSFLtqDqiF/rYyUpnCeLi03G4vsBR+9ep8nw==
+strapio@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/strapio/-/strapio-2.4.5.tgz#2f51a9dfd5e07ce69babe4c268632542e0b91d97"
+  integrity sha512-nV0xGH7hKvuIreRKJXFsZZNBCs9v282ckV+HRXVgoSWxOuNBivmQei7Z+/ERL0VJzp4bwd8w2gPYCRUs8B+rSQ==
   dependencies:
     socket.io "^4.1.2"
 

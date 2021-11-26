@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "strapi-utils": "^3.6.8",
-    "strapio": "^2.3.2"
+    "strapio": "^2.4.5"
   },
   "author": {
     "name": "Lars Feldeisen",
