@@ -8,8 +8,10 @@
     "description": "A Strapi plugin which integrate Socket.io"
   },
   "dependencies": {
-    "strapi-utils": "^3.6.8",
-    "strapio": "^2.4.5"
+    "global": "^4.4.0",
+    "strapio": "^2.4.5",
+    "uglify-js": "^3.14.3",
+    "@strapi/utils": "4.0.0"
   },
   "author": {
     "name": "Lars Feldeisen",
