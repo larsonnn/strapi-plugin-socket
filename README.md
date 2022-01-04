@@ -1,8 +1,7 @@
 # Strapi Socket.IO Plugin
 
-## UPDATE for STRAPIO v2: Subscribe only
-
-You need to subscribe to one content-type (see client example). You will not receive data from all content-types as default anymore.
+## version ^3.0.0 for Strapi v4
+when using strapi v3 please use the version 2 of the plugin.
 
 ## Description
 
