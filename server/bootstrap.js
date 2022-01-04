@@ -6,7 +6,7 @@ module.exports = (
   }
 ) => {
   process.nextTick(() => {
+    // TODO: need configuration view in admin ui
     strapi.StrapIO = (require("strapio"))(strapi);
-          console.log("StrapIO", strapi.server)
   });
 };
