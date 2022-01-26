@@ -3,9 +3,9 @@
   "version": "3.0.1",
   "description": "A Strapi plugin which integrate Socket.io",
   "strapi": {
-    "name": "Socket",
-    "icon": "plug",
-    "description": "A Strapi plugin which integrate Socket.io"
+    "name": "socket-io",
+    "description": "A Strapi plugin which integrate Socket.io",
+    "kind": "plugin"
   },
   "dependencies": {
     "global": "^4.4.0",
