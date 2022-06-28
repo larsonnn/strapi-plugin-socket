@@ -1,7 +1,10 @@
+# NOT MAINTAINER
+
+# FOR STRAPI v4 use: 
+https://github.com/ComfortablyCoding/strapi-plugin-io
+
 # Strapi Socket.IO Plugin
 
-## version ^3.0.0 for Strapi v4
-when using strapi v3 please use the version 2 of the plugin.
 
 ## Description
 
